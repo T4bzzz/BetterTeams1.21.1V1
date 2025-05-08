@@ -1,0 +1,5 @@
+/createteam Penis
+/team create 1
+/help
+/me 1
+/team create 1

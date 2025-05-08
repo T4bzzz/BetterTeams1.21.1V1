@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "betterteams_fabric",
+  "version": "${version}",
+  "name": "betterteams_fabric",
+  "description": "A Mod to make Teams on ur Fabric Minecraft Server",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.t4bzzz.betterteams_fabric.client.Betterteams_fabricDataGenerator"
+    ],
+    "client": [
+      "com.t4bzzz.betterteams_fabric.client.Betterteams_fabricClient"
+    ],
+    "main": [
+      "com.t4bzzz.betterteams_fabric.Betterteams_fabric"
+    ]
+  },
+  "mixins": [
+    "betterteams_fabric.mixins.json",
+    {
+      "config": "betterteams_fabric.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
